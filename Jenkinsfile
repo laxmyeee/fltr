@@ -10,19 +10,19 @@ pipeline {
 
         stage('Flutter Version') {
             steps {
-                bat 'flutter --version'
+                sh 'flutter --version'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                bat 'flutter pub get'
+                sh 'flutter pub get'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'flutter test'
+                sh 'flutter test'
             }
         }
     }
